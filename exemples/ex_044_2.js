@@ -1,10 +1,10 @@
-const jsonString =
+const jsonString = `
 {
   "nom": "Alice",
   "age": 25,
   "profession": "Développeuse",
   "langages": ["JavaScript", "Python", "Java"]
-}
+}`;
 
 const objet = JSON.parse(jsonString);
 
