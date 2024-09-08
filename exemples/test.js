@@ -1,1 +1,2 @@
-document.getElementById('monLien').setAttribute('href', 'https://www.google.com');
+// Supprimer le cookie "utilisateur"
+document.cookie = "utilisateur=; max-age=0; path=/;";

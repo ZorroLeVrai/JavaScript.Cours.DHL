@@ -2,7 +2,7 @@ const parameterNameElement = document.getElementById("parameterName");
 const parameterValueElement = document.getElementById("parameterValue");
 const updateParameterButton = document.getElementById("updateParameter");
 
-updateParameterButton.addEventListener("click", updateParameterAction);
+updateParameterButton.addEventListener("click", updateParameterHandler);
 
 function updateParameter(parameterName, parameterValue) {
   if (!parameterName)
@@ -18,7 +18,7 @@ function updateParameter(parameterName, parameterValue) {
   window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
 }
 
-function updateParameterAction() {
+function updateParameterHandler() {
   const parameterName = parameterNameElement.value;
   const parameterValue = parameterValueElement.value;
 
