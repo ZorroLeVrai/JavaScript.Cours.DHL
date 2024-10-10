@@ -1,0 +1,30 @@
+p {
+  /* Couleur */
+  /* Couleur du texte */
+  color: blue;
+  /* Couleur de l’arrière-plan */
+  background-color: yellow;
+
+  /* Mise en page */
+  /* Marge extérieure */
+  margin: 10px;
+  /* Marge intérieure */
+  padding: 10px;
+
+  /* Polices */
+  /* Police du texte */
+  font-family: Arial, sans-serif;
+  /* Taille de la police */
+  font-size: 20px;
+  /* Gras */
+  font-weight: bold;
+
+  /* Bordures et boîtes */
+/* Bordure autour d'un élément */
+border: 1px solid black;
+/* Largeur de l'élément */
+width: 100px;
+/* Hauteur de l'élément */
+height: 50px;
+
+}

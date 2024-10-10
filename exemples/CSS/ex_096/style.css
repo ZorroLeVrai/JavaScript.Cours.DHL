@@ -1,0 +1,7 @@
+/* Exemple d'une règle CSS */
+p {
+  /* Cette déclaration change la couleur du texte des paragraphes en bleu */
+  color: blue;
+  /* Cette déclaration définit la taille de la police à 16 pixels */
+  font-size: 24px;
+}
