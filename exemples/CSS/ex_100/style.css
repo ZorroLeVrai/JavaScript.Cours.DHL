@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  /* Active le mode flex sur un conteneur */
+  flex-direction: row;
+  /* row (par défaut) ou column */
+  justify-content: center;
+  /* Aligne les éléments flexibles le long de l'axe principal */
+  align-items: center;
+  /* Aligne les éléments perpendiculairement à l'axe principal */
+}
+
+.item {
+  flex-grow: 1;
+  /* L'élément grandira pour occuper l'espace disponible */
+  flex-shrink: 1;
+  /* L'élément peut se rétrécir si nécessaire */
+  flex-basis: 200px;
+  /* Taille initiale de 200px */
+}
