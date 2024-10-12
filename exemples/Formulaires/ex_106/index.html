@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accéder aux valeurs d'un formulaire</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js" ></script>
+</head>
+<body>
+  <form id="myForm">
+    <label for="username">Prénom de l'utilisateur :</label>
+    <input type="text" id="firstname" name="username">
+    <label for="username">Nom de l'utilisateur :</label>
+    <input type="text" id="lastname" name="username">
+    <button type="button" class="twoColumns" onclick="showUsername()">Afficher le nom d'utilisateur</button>
+  </form>
+  <div>
+    <p id="submittedFirstName"></p>
+    <p id="submittedLastName"></p>
+  </div>
+</body>
+</html>
