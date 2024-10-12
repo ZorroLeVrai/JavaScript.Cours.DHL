@@ -1,0 +1,6 @@
+#dynamicDiv {
+  width: 200px;
+  height: 200px;
+  background-color: coral;
+  transition: all 1s ease;
+}
