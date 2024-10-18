@@ -16,4 +16,5 @@
   /* L'élément peut se rétrécir si nécessaire */
   flex-basis: 200px;
   /* Taille initiale de 200px */
+  border: 1px solid black;
 }

@@ -1,2 +1,4 @@
-// Supprimer le cookie "utilisateur"
-document.cookie = "utilisateur=; max-age=0; path=/;";
+$.get( "ajax/test.html", function( data ) {
+  $( ".result" ).html( data );
+  alert( "Load was performed." );
+});

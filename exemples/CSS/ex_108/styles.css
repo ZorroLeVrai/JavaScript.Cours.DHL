@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #3498db;
+  --padding: 10px;
+}
+
+button {
+  background-color: var(--primary-color);
+  padding: var(--padding);
+  border: none;
+  color: white;
+}
