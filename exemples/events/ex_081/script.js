@@ -26,7 +26,7 @@ boutonAjoutClasse.addEventListener("click", () => {
 });
 
 boutonModifCouleur.addEventListener("click", () => {
-  boutonPrincipal.style.backgroundColor = "blue";
+  boutonPrincipal.style.backgroundColor = "lightblue";
 });
 
 function handleClick() {
