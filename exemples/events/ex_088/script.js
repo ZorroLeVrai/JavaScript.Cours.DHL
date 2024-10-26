@@ -5,15 +5,20 @@ const pageIdElement = document.getElementById("pageId");
 newPageButton.addEventListener("click", handleNewPage);
 backButton.addEventListener("click", handleBackButton);
 //événement déclenché lorsque l'utilisateur navigue dans l'historique
-window.addEventListener('popstate', updatePageId);
+window.addEventListener('popstate', retrieveState);
 
-let pageNumber = 1;
+let pageNumber = 0;
+
+function updatePageNumber(pageNum) {
+  pageNumber = pageNum;
+  pageIdElement.textContent = pageNum;
+}
 
 function handleNewPage() {
+  updatePageNumber(pageNumber + 1);
   //Ajoute une nouvelle entrée dans l'historique
-  history.pushState({ page: pageNumber }, `page ${pageNumber}`, `?page=${pageNumber}`);
-  ++pageNumber;
-  updatePageId();
+  //Le 1er argument sert à associer une donnée à la page d'historique
+  history.pushState({ page: pageNumber }, "", `?page=${pageNumber}`);
 }
 
 function handleBackButton() {
@@ -21,9 +26,9 @@ function handleBackButton() {
   history.back();
 }
 
-function updatePageId() {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const pageId = urlParams.get("page");
-  pageIdElement.textContent = pageId ?? "Pas d'identifiant";
+function retrieveState(event) {
+  //recupère la donnée associée à l'historique
+  const historyState = event.state;
+  if (historyState)
+    updatePageNumber(historyState.page);
 }
