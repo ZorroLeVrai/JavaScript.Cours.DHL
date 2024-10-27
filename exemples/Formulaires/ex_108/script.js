@@ -1,5 +1,5 @@
 const formElement = document.getElementById("myForm");
-const errorElement = document.getElementById("error");
+const messageElement = document.getElementById("message");
 
 formElement.addEventListener("submit", submitForm);
 
@@ -26,8 +26,8 @@ function submitForm(event) {
 
   if (erreurValidation) {
     event.preventDefault();
-    errorElement.textContent = erreurValidation;
+    messageElement.textContent = erreurValidation;
   } else {
-    errorElement.textContent = "Formulaire valide";
+    messageElement.textContent = "Formulaire valide";
   }
 }
