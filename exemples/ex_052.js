@@ -1,10 +1,12 @@
 class ClassWithStaticMethod {
   static staticProperty = 'valeur de staticProperty';
   static staticMethod() { return 'method statique'; }
-  static {
-    console.log('Initialisation de la classe statique');
+  constructor(valeur) {
+    this.valeur = valeur;
   }
 }
-//Initialisation de la classe statique
+
 console.log(ClassWithStaticMethod.staticProperty);  //valeur de staticProperty
 console.log(ClassWithStaticMethod.staticMethod());  //method statique
+const obj = new ClassWithStaticMethod("Test");
+console.log(obj.staticProperty);  //undefined
