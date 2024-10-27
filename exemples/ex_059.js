@@ -2,4 +2,4 @@ function Text() {
   console.log(this);
   this.texte = "Bonjour";
 }
-const t = new Text;  //Text {}
+const t = new Text();  //Text {}
