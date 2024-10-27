@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accéder aux valeurs d'un formulaire</title>
+  <link rel="shortcut icon" href="#">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js" ></script>
 </head>
 <body>
   <form id="myForm">
-    <label for="username">Prénom de l'utilisateur :</label>
-    <input type="text" id="firstname" name="username">
-    <label for="username">Nom de l'utilisateur :</label>
-    <input type="text" id="lastname" name="username">
-    <button type="button" onclick="fillForm()">Remplir le formulaire</button>
-    <button type="button" onclick="initForm()">Initialiser le formulaire</button>
+    <label for="prenom">Prénom de l'utilisateur :</label>
+    <input type="text" id="prenom" name="firstname">
+    <label for="nom">Nom de l'utilisateur :</label>
+    <input type="text" id="nom" name="lastname">
+    <button type="button" id="fillFormButton">Remplir le formulaire</button>
+    <button type="button" id="initFormButton">Initialiser le formulaire</button>
+    <button type="submit" class="twoColumns">Envoi du formulaire</button>
   </form>
 </body>
 </html>

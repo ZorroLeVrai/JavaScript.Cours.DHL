@@ -3,3 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   width: 400px;
 }
+
+.twoColumns {
+  grid-column: 1 / 3;
+}
