@@ -1,7 +1,7 @@
 const obj1 = {};
 const obj2 = new Object();
 
-const obj3 = { "one": 1, "two": 2 };
+const obj3 = { one: 1, two: 2 };
 console.log(obj3.one);     //1
 console.log(obj3["two"]);  //2
 
