@@ -1,19 +1,17 @@
-const firstNameElement = document.getElementById("firstname");
-const lastNameElement = document.getElementById("lastname");
 const submittedFirstNameElement = document.getElementById("submittedFirstName");
 const submittedLastNameElement = document.getElementById("submittedLastName");
-const formElement = document.getElementById("myForm");
 
+const formElement = document.getElementById("myForm");
 formElement.addEventListener("submit", showUsername);
 
 function showUsername(event) {
-  const firstName = firstNameElement.value;
-  const lastName = lastNameElement.value;
+  //l'action par défaut ne doit pas être exécutée
   event.preventDefault();
 
-  if (firstName)
-    submittedFirstNameElement.textContent = firstName;
+  //récupération des champs du formulaire
+  const { firstname: firstNameElement, lastname: lastNameElement } = formElement.elements;
 
-  if (lastName)
-    submittedLastNameElement.textContent = lastName;
+  //Mis à jour des champs
+  submittedFirstNameElement.textContent = `Prénom: ${firstNameElement.value}`;
+  submittedLastNameElement.textContent = `Nom: ${lastNameElement.value}`;
 }
