@@ -2,6 +2,8 @@ import { SecondaryNavBarData, generateSeries, createLinkWithDirectory, createSim
 
 const formatDirectory = index => `ex_${index.toString().padStart(3, '0')}`;
 
+const formatExercice = index => `exo_${index.toString().padStart(3, '0')}`;
+
 const linkData = new Map([
   // ["html", new SecondaryNavBarData("HTML", ["html1", "html2", "html3"])],
   // ["css", new SecondaryNavBarData("CSS", ["css1", "css2", "css3"])],
@@ -29,6 +31,11 @@ const linkData = new Map([
   ["ajax",
     new SecondaryNavBarData("exemples/AJAX",
       ["ex_110", "ex_111"]
+        .map(tag => createLinkWithDirectory(tag)))
+  ],
+  ["exo_javascript",
+    new SecondaryNavBarData("exercices/Exo_JavaScript",
+      generateSeries(1, 33, formatExercice)
         .map(tag => createLinkWithDirectory(tag)))
   ]
 ]);
