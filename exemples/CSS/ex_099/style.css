@@ -20,11 +20,11 @@ p {
   font-weight: bold;
 
   /* Bordures et boîtes */
-/* Bordure autour d'un élément */
-border: 1px solid black;
-/* Largeur de l'élément */
-width: 100px;
-/* Hauteur de l'élément */
-height: 50px;
+  /* Bordure autour d'un élément */
+  border: 1px solid black;
+  /* Largeur de l'élément */
+  width: 100px;
+  /* Hauteur de l'élément */
+  height: 50px;
 
 }
