@@ -10,10 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Bootstrap Bundle with Popper -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../styles.css"/>
     <script defer src="./main.js"></script>
 
     <title>EXERCICE 02 - LES VARIABLES - LES VARIABLES NUMERIQUES</title>
@@ -24,14 +26,22 @@
         <div class="jumbotron">
             <h1 class="display-4">EXERCICE02 - Les Variables et Opérateurs Arithmétiques - Les variables numériques</h1>
             <hr>
-            <p class="lead">Création et utilisation des<mark> Les Variables et Opérateurs Arithmetiques </mark> en <mark>Javascript</mark>
-            </p>
+            <p class="lead">Création et utilisation des<mark> Les Variables et Opérateurs Arithmetiques </mark> en <mark>Javascript</mark></p>
         </div>
-        <form>
-            <div class="form-group">
-                <span class="result lead"></span>
-            </div>
-        </form>
+
+        <div>
+            <form class="grid-container">
+                <label for="operande1">Prénom: </label>
+                <input id="operande1" />
+                <label for="operande2">Nom: </label>
+                <input id="operande2" />
+                <button id="executer" class="grid-item-2columns">Afficher le résultat</button>
+            </form>
+        </div>
+        
+        <div class="form-group">
+            <span id="result" class="lead"></span>
+        </div>
     </div>
 </body>
 

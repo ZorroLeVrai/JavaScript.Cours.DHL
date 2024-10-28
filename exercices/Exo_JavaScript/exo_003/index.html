@@ -14,6 +14,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../styles.css"/>
     <script defer src="./main.js"></script>
 
     <title>EXERCICE 03 - LES VARIABLES - OBJET MATH</title>
@@ -28,20 +30,26 @@
             </p>
         </div>
 
-        <form>
-            <div class="form-group">
-                <span class="result lead">
-                    <h3>Utilisation des fonctions() de l'objet Math</h3>
-                    <h5>Utilisation de la constante &#960; (pi)</h5>
-                    <p>La valeur de <b>&#960</b> est : <b><span id="pi"></span></b></p>
-                    <p><h5>Calcul du périmètre <i>(d x &#960;)</i> et de l'aire <i>(&#960; * r²)</i> d'un cercle </h5></p>
-                    <p>Périmètre = <b><span id="perimetre"></span> cm</b></p>
-                    <p>Périmètre<i>(arrondi)</i> = <b><span id="perimetre_arrondi"></span> cm</b></p>
-                    <p>Aire = <b><span id="aire"></span> cm²</b></p>
-                    <p>Aire<i>(arrondi)</i> = <b><span id="aire_arrondi"></span> cm²</b></p>
-                </span>
-            </div>
-        </form>
+        <div>
+            <form class="grid-container">
+                <label for="diametre">Diamètre: </label>
+                <input id="diametre" />
+                <button id="executer" class="grid-item-2columns">Afficher le résultat</button>
+            </form>
+        </div>
+
+        <div class="form-group">
+            <span id="result" class="lead remove">
+                <h3>Utilisation des fonctions() de l'objet Math</h3>
+                <h5>Utilisation de la constante &#960; (pi)</h5>
+                <p>La valeur de <b>&#960</b> est : <b><span id="pi"></span></b></p>
+                <p><h5>Calcul du périmètre <i>(d x &#960;)</i> et de l'aire <i>(&#960; * r²)</i> d'un cercle </h5></p>
+                <p>Périmètre = <b><span id="perimetre"></span> cm</b></p>
+                <p>Périmètre<i>(arrondi)</i> = <b><span id="perimetre_arrondi"></span> cm</b></p>
+                <p>Aire = <b><span id="aire"></span> cm²</b></p>
+                <p>Aire<i>(arrondi)</i> = <b><span id="aire_arrondi"></span> cm²</b></p>
+            </span>
+        </div>
     </div>
 </body>
 
