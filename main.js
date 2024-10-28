@@ -2,6 +2,7 @@ import { SecondaryNavBarData, NavigationLink, getDirectoryName } from "./helper.
 import linkData from "./linkData.js";
 
 const primaryNavbarElement = document.getElementById("primary-navbar");
+const secondaryNavbarContainer = document.getElementById("secondary-navbar-container");
 const documentSecondaryNavbarElements = document.getElementsByClassName("secondary-navbar");
 
 addPrimaryLinks(linkData);
@@ -16,7 +17,10 @@ const primaryNavLinks = document.querySelectorAll('#primary-navbar .nav-link');
 function addSecondaryLinks(links) {
   for (const [key, value] of links) {
     const navbarId = `${key}-navbar`;
-    const secondaryNavBarElement = document.getElementById(navbarId);
+    const secondaryNavBarElement = document.createElement("nav");
+    secondaryNavBarElement.id = navbarId;
+    secondaryNavBarElement.className = "secondary-navbar remove";
+
     const { directory, links } = value;
     links.forEach(navigationLink => {
       const { tag, url } = navigationLink;
@@ -45,6 +49,8 @@ function addSecondaryLinks(links) {
 
       secondaryNavBarElement.appendChild(linkElement);
     });
+
+    secondaryNavbarContainer.appendChild(secondaryNavBarElement);
   }
 }
 

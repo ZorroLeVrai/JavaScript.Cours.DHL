@@ -46,6 +46,10 @@ export function createLinkWithDirectory(directoryName, fileName = "index.html") 
   return new NavigationLink(directoryName, `${directoryName}/${fileName}`);
 }
 
+export function createSimpleJsLink(tag) {
+  return new NavigationLink(tag, `${tag}.js`);
+}
+
 /**
  * 
  * @param {number} from 
