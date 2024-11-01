@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styles.css"/>
+    <script defer src="./main.js"></script>
+
+    <title>EXERCICE05 - Calcul des intérêts</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">EXERCICE05 - Calcul des intérêts</h1>
+            <hr>
+        </div>
+
+        <div>
+            <form class="grid-container">
+                <label for="initial_capital">Capital de Départ: </label>
+                <input type="number" id="initial_capital" />
+                <label for="rate">Le taux d'intérêts (en %): </label>
+                <input type="number" id="rate" />
+                <label for="time_in_years">La durée de l'épargne: </label>
+                <input type="number" id="time_in_years" />
+                <button id="executer" class="grid-item-2columns">Résultat</button>
+            </form>
+        </div>
+
+        <div class="form-group">
+            <span id="result" class="lead">
+                <p>Le montant des intérêts s'éléve à <span id="interest"></span></p>
+                <p>Le capital final sera de <span id="final_capital"></span></p>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
