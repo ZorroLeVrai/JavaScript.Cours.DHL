@@ -28,7 +28,7 @@ function executerAction(event) {
   resultElement.classList.remove("remove");
 
   // Récupération et stockage des saisies utilisateur
-  const diametre = Number(diametreElement.value);
+  const diametre = Number(diametreElement.valueAsNumber);
 
   //calculs
   const perimetre = diametre * pi;

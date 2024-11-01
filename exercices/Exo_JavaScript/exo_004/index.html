@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styles.css"/>
+    <script defer src="./main.js"></script>
+
+    <title>EXERCICE04 - LES VARIABLES - Palindrome</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">EXERCICE04 - Les Variables et Opérateurs Arithmétiques - Les palindromes</h1>
+            <hr>
+            <p class="lead">Création et utilisation des <mark> méthodes applicables aux chaines de caractères </mark>
+            </p>
+        </div>
+
+        <div>
+            <form class="grid-container">
+                <label for="mot">Mot: </label>
+                <input type="text" id="mot" />
+                <button id="executer" class="grid-item-2columns">Résultat</button>
+            </form>
+        </div>
+
+        <div class="form-group">
+            <span id="result" class="lead">
+                <p>Vous avez saisi <span id="mot_saisi"></span></p>
+                <p>Le mot inversé <span id="mot_inverse"></span></p>
+                <p id="resultat_palindrome"></p>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

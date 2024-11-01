@@ -18,17 +18,15 @@ function executerAction(event) {
   event.preventDefault();
 
   // Récupération et stockage des saisies utilisateur
-  const nb1 = Number(operande1Element.value);
-  const nb2 = Number(operande2Element.value);
+  const nb1 = operande1Element.valueAsNumber;
+  const nb2 = operande2Element.valueAsNumber;
 
   // Addition des deux nombres
   const resultat = nb1 + nb2;
 
-  const texteAAfficher = `<h3>Addition de deux variables numériques</h3>
+  // Injection du résultat dans l'element HTML .result
+  resultElement.innerHTML = `<h3>Addition de deux variables numériques</h3>
   <p>Vous avez saisi <b>${nb1}</b> </p>
   <p>Vous avez saisi <b>${nb2}</b> </p>
   <p>La somme de <b>${nb1}</b> + <b>${nb2}</b> = <b>${resultat}</b><hr><p>`;
-
-  // Injection du résultat dans l'element HTML .result
-  resultElement.innerHTML = `${texteAAfficher}`;
 }
