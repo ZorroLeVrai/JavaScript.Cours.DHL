@@ -13,32 +13,27 @@
     <link rel="stylesheet" href="../styles.css"/>
     <script defer src="./main.js"></script>
 
-    <title>EXERCICE05 - Calcul des intérêts</title>
+    <title>EXERCICE06 - Mineur ou Majeur</title>
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">EXERCICE05 - Calcul des intérêts</h1>
+            <h1 class="display-4">EXERCICE06 - Mineur ou Majeur</h1>
             <hr>
         </div>
 
         <div>
             <form class="grid-container">
-                <label for="initial_capital">Capital de Départ: </label>
-                <input type="number" id="initial_capital" />
-                <label for="rate">Le taux d'intérêts (en %): </label>
-                <input type="number" id="rate" />
-                <label for="time_in_years">La durée de l'épargne: </label>
-                <input type="number" id="time_in_years" />
+                <label for="age">Age de la personne: </label>
+                <input type="number" id="age" />
                 <button id="executer" class="grid-item-2columns">Résultat</button>
             </form>
         </div>
 
         <div class="form-group">
             <div id="result" class="lead">
-                <p>Le montant des intérêts s'éléve à <span id="interest"></span></p>
-                <p>Le capital final sera de <span id="final_capital"></span></p>
+                <p id="message"></p>
             </div>
         </div>
     </div>

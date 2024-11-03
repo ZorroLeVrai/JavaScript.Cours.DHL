@@ -1,5 +1,5 @@
 /**
- * EXERCICE04 - Les Variables et Opérateurs Arithmétiques - Les Palindromes
+ * EXERCICE05 - Calcul des intérêts
  */
 
 // Création de la constante result permettant de recupérer l'élément HTML class="result"
