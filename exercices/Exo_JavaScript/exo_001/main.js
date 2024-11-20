@@ -27,5 +27,5 @@ function executerAction(event) {
 <p>Bonjour <b>${resultat}</b><p>`;
 
   // Patch des résultats dans le DOM
-  resultElement.innerHTML += texteAAfficher;
+  resultElement.innerHTML = texteAAfficher;
 }
