@@ -1,0 +1,25 @@
+#conteneur {
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+#rouge {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
+#vert {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+
+#bleu {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}

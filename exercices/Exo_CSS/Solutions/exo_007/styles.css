@@ -1,0 +1,38 @@
+nav.menu {
+  /* Ajoute un fond de couleur */
+  background-color: #333;
+  /* Ajoute un espacement autour du menu */
+  padding: 10px;
+}
+
+.menu ul {
+  /* Supprime les puces */
+  list-style: none;
+  /* Supprime le padding par défaut */
+  padding: 0;
+  /* Supprime le margin par défaut */
+  margin: 0;
+}
+
+
+.menu ul li {
+  /* Aligne les éléments horizontalement */
+  display: inline-block;
+  /* Ajoute un espacement entre les éléments */
+  margin-right: 15px;
+}
+
+
+.menu a {
+  color: white;
+  padding: 5px;
+  /* Supprime le soulignement*/
+  text-decoration: none;
+}
+
+
+.menu a:hover {
+  /* Change la couleur du texte au survol */
+  color: orange;
+}
+

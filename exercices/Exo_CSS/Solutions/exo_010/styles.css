@@ -1,0 +1,19 @@
+.clignotant {
+  /* Définit l'animation */
+  animation: clignote 1s infinite;
+}
+
+/* Définition de l'animation */
+@keyframes clignote {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,25 @@
+div.carte {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: beige;
+  padding: 10px;
+  margin: 10px;
+}
+
+div.carte img {
+  flex: 1 1 auto;
+  width: 100%;
+  height: calc(100% - 2em - 4px);
+  object-fit: contain;
+}
+
+div.carte p {
+  flex: 0 0 auto;
+  text-align: center;
+  margin-block-start: 2px;
+  margin-block-end: 2px;
+}
