@@ -33,9 +33,14 @@ const linkData = new Map([
       ["ex_110", "ex_111"]
         .map(tag => createLinkWithDirectory(tag)))
   ],
+  ["solutions_css",
+    new SecondaryNavBarData("exercices/Exo_CSS/Solutions_CSS",
+      generateSeries(1, 13, formatExercice)
+        .map(tag => createLinkWithDirectory(tag)))
+  ],
   ["exo_javascript",
     new SecondaryNavBarData("exercices/Exo_JavaScript",
-      generateSeries(1, 3, formatExercice)
+      generateSeries(1, 12, formatExercice)
         .map(tag => createLinkWithDirectory(tag)))
   ]
 ]);
