@@ -1,8 +1,7 @@
 /**
- * EXERCICE07 - Les Variables et Opérateurs Arithmétiques - Les Palindromes
+ * EXERCICE08 - Quelle catégorie pour mon enfant?
  */
 
-// Création de la constante result permettant de recupérer l'élément HTML class="result"
 const ageElement = document.getElementById("age");
 const buttonExecuter = document.getElementById("executer");
 const categoryMessageElement = document.getElementById("categorie_message");
