@@ -36,7 +36,7 @@ function calculerNbPliages(epaisseurFeuilleEnMm, epaisseurCibleEnMm) {
 
   while (epaisseurFeuilleEnMm < epaisseurCibleEnMm) {
     epaisseurFeuilleEnMm *= 2;
-    nbPliages++;
+    nbPliages++;  // nbPliages = nbPliages + 1;
   }
 
   return nbPliages;

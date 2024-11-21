@@ -47,9 +47,12 @@ function creerListe(termeDebut, termeFin) {
  */
 function calculerSomme(listeNombres) {
   let somme = 0;
-  for (let i = 0; i < listeNombres.length; i++) {
-    somme += listeNombres[i];
+  for (const nombre of listeNombres) {
+    somme += nombre;
   }
+  // for (let i = 0; i < listeNombres.length; i++) {
+  //   somme += listeNombres[i];
+  // }
   return somme;
 }
 
