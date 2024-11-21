@@ -1,3 +1,5 @@
+import { AjoutModificationStatus } from './tools.js';
+
 const ajoutTacheElement = document.getElementById('ajouter_tache');
 const modifierTacheElement = document.getElementById('modifier_tache');
 const supprimerTacheElement = document.getElementById('supprimer_tache');
@@ -17,8 +19,8 @@ const validerSuppressionTacheElement = document.getElementById('valider_suppress
 const annulerSuppressionTacheElement = document.getElementById('annuler_suppression_tache');
 
 //Abonnement aux evenements
-ajoutTacheElement.addEventListener('click', () => afficherAjoutMenu("Ajout d'une tache"));
-modifierTacheElement.addEventListener('click', () => afficherAjoutMenu("Supperession d'une tache"));
+ajoutTacheElement.addEventListener('click', () => afficherAjoutMenu(AjoutModificationStatus.AJOUT));
+modifierTacheElement.addEventListener('click', () => afficherAjoutMenu(AjoutModificationStatus.MODIFICATION));
 supprimerTacheElement.addEventListener('click', afficherSuppressionMenu);
 
 validerModificationTacheElement.addEventListener('click', validerModificationTache);
@@ -27,12 +29,19 @@ annulerModificationTacheElement.addEventListener('click', () => ajoutModificatio
 validerSuppressionTacheElement.addEventListener('click', validerSuppressionTache);
 annulerSuppressionTacheElement.addEventListener('click', () => suppressionTacheElement.classList.add('remove'));
 
+let modeEditionMenu = AjoutModificationStatus.AJOUT;
+
 /**
  * Afficher le menu d'ajout / modification de tache
- * @param {string} titreMenu Titre du menu
+ * @param {AjoutModificationStatus} mode Mode d'ajout ou de modification
  */
-function afficherAjoutMenu(titreMenu) {
-  titreAjoutModificationElement.textContent = titreMenu;
+function afficherAjoutMenu(mode) {
+  modeEditionMenu = mode;
+  if (mode === AjoutModificationStatus.AJOUT)
+    titreAjoutModificationElement.textContent = "Ajout d'une tache";
+  else
+    titreAjoutModificationElement.textContent = "Modification d'une tache";
+
   ajoutModificationTacheElement.classList.remove("remove");
 }
 
@@ -47,6 +56,7 @@ function afficherSuppressionMenu() {
  * Valider l'ajout / la modification de la tache
  */
 function validerModificationTache() {
+  console.log(modeEditionMenu);
   ajoutModificationTacheElement.classList.add("remove");
   initAjoutModificationTachesMenu();
 }
