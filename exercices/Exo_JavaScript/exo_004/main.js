@@ -3,8 +3,11 @@
  */
 
 // Création de la constante result permettant de recupérer l'élément HTML class="result"
+//input
 const motElement = document.getElementById("mot");
 const buttonExecuter = document.getElementById("executer");
+
+//output
 const motSaisiElement = document.getElementById("mot_saisi");
 const motInverseElement = document.getElementById("mot_inverse");
 const resultElement = document.getElementById("resultat_palindrome");
@@ -21,7 +24,10 @@ function executerAction(event) {
 
   // Récupération et stockage des saisies utilisateur
   const inputWord = motElement.value.toLowerCase();
+
+  // Inversion du mot
   const reversedWord = inputWord.split("").reverse().join("");
+  
   const isPalindrome = (inputWord === reversedWord);
 
   //Mise à jour de la page
