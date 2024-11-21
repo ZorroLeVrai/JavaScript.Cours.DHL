@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXERCICE 17 - Gestion des tâches</title>
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="taches.css"/>
+  <script defer src="./main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div>
+        <h1 class="display-4 center">EXERCICE 17 - Gestion des tâches</h1>
+        <hr>
+    </div>
+    <div id="boutons" class="center vertical-margin">
+      <div class="titre-menu">Actions sur les tâches</div>
+      <button id="ajouter_tache">Ajouter</button>
+      <button disabled id="modifier_tache">Modifier</button>
+      <button disabled id="supprimer_tache">Supprimer</button>
+    </div>
+    <div id="ajout_modification_taches" class="center vertical-margin remove">
+      <div id="titre_ajout_modification" class="titre-menu">Ajout / Modification de la tâche</div>
+      <div class="grid-2columns">
+        <label for="nom_tache">Nom de la tâche:</label>
+        <input type="text" id="nom_tache" />
+        <label for="statut_tache">Statut de la tâche:</label>
+        <select id="statut_tache">
+          <option value="A faire">A faire</option>
+          <option value="En cours">En cours</option>
+          <option value="Terminée">Terminée</option>
+        </select>
+        <div>
+          <input type="checkbox" id="tache_urgente" />
+          <label for="tache_urgente">Tâche urgente</label>
+        </div>
+        <div class="grid-item-2columns">
+          <button id="valider_modification_tache">Valider</button>
+          <button id="annuler_modification_tache">Annuler</button>
+        </div>
+      </div>
+    </div>
+    <div id="suppression_taches" class="center vertical-margin remove">
+      <div class="titre-menu">Suppression des tâches</div>
+      <div>Êtes-vous sûr de vouloir continuer ?</div>
+      <div class="margin-02rem-0">
+        <button id="valider_suppression_tache">Valider</button>
+        <button id="annuler_suppression_tache">Annuler</button>
+      </div>
+    </div>
+    <div class="titre-menu center">Liste des tâches</div>
+    <div id="liste_taches">
+      <div id="taches_a_faire" class="border-light border-radius-05rem padding-05rem margin-05rem-02rem">
+        <p class="center">A faire</p>
+        <ul id="liste_taches_a_faire"></ul>
+      </div>
+      <div id="taches_en_cours" class="border-light border-radius-05rem padding-05rem margin-05rem-02rem">
+        <p class="center">En cours</p>
+        <ul id="liste_taches_en_cours"></ul>
+      </div>
+      <div id="taches_terminees" class="border-light border-radius-05rem padding-05rem margin-05rem-02rem">
+        <p class="center">Terminées</p>
+        <ul id="liste_taches_terminees"></ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

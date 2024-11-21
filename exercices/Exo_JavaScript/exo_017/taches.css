@@ -1,0 +1,29 @@
+#liste_taches {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#liste_taches>div {
+  flex-grow: 1;
+}
+
+button {
+  padding: 0.2rem;
+}
+
+.titre-menu {
+  font-size: large;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.grid-2columns {
+  display: grid;
+  grid-template-columns: 20ch 1fr;
+  grid-gap: 0.2rem;
+}
+
+.grid-column2 {
+  grid-column: 2;
+}

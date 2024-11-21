@@ -1,14 +1,7 @@
 /**
  * EXERCICE 16 - Calculez vos impots
  */
-
-const tranches = [
-  new Tranche(11294, 0),
-  new Tranche(28797, 0.11),
-  new Tranche(82341, 0.3),
-  new Tranche(177106, 0.41),
-  new Tranche(1000000, 0.45)
-];
+import { tranches } from "./tranches.js";
 
 const netImposableElement = document.getElementById("net_imposable");
 const nombreAdulesElement = document.getElementById("nombre_adultes");
@@ -29,6 +22,21 @@ function executerAction() {
 
   const nbParts = calculerNbParts(nombreAdultes, nombreEnfants);
   const impots = calculerImpots(netImposable, nbParts);
+  afficherImpots(impots);
+}
+
+
+/**
+ * Afficher les impots
+ * @param {number} impots Les impots
+ */
+function afficherImpots(impots) {
+  if (impots <= 0) {
+    impotsResultatElement.textContent = "Vous n'avez pas d'impots à payer";
+    return;
+  }
+
+  impotsResultatElement.textContent = `Le montant de vos impots est de : ${impots.toFixed(2)} €`;
 }
 
 
@@ -39,16 +47,11 @@ function executerAction() {
  * @returns {number} Le nombre de parts
  */
 function calculerNbParts(nombreAdultes, nombreEnfants) {
-  let nbParts = nombreAdultes;
-
   if (nombreEnfants <= 2) {
-    nbParts += nombreEnfants / 2;
-  }
-  else {
-    nbParts += nombreEnfants - 1;
+    return nombreAdultes + nombreEnfants / 2;
   }
 
-  return nbParts;
+  return nombreAdultes + nombreEnfants - 1;
 }
 
 
@@ -59,29 +62,20 @@ function calculerNbParts(nombreAdultes, nombreEnfants) {
  * @returns {number} Les impots
  */
 function calculerImpots(netImposable, nbParts) {
-  let impots = 0;
-  let tranche = 0;
-  let reste = netImposable;
+  let impotsParPart = 0;
+  let seuilPrecedent = 0;
+  const netImposableParPart = netImposable / nbParts;
 
-  for (let i = 0; i < TRANCHE.length; i++) {
-    tranche = TRANCHE[i];
-    if (reste > tranche) {
-      impots += tranche * TAUX[i];
-      reste -= tranche;
+  for (const { seuil, taux } of tranches) {
+    if (netImposableParPart > seuil) {
+      impotsParPart += (seuil - seuilPrecedent) * taux;
+      seuilPrecedent = seuil;
     }
     else {
-      impots += reste * TAUX[i];
+      impotsParPart += (netImposableParPart - seuilPrecedent) * taux;
       break;
     }
   }
 
-  return impots;
-}
-
-
-class Tranche {
-  constructor(montant, taux) {
-    this.montant = montant;
-    this.taux = taux;
-  }
+  return impotsParPart * nbParts;
 }
