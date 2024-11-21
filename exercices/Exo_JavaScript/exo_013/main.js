@@ -5,10 +5,10 @@ const nombre2Element = document.getElementById("nombre2");
 const categoryMessageElement = document.getElementById("categorie_message");
 
 
-nombre1Element.addEventListener("input", calculerMoyenne);
-nombre2Element.addEventListener("input", calculerMoyenne);
+nombre1Element.addEventListener("input", afficherMoyenne);
+nombre2Element.addEventListener("input", afficherMoyenne);
 
-function calculerMoyenne() {
+function afficherMoyenne() {
   const nombre1 = nombre1Element.valueAsNumber;
   const nombre2 = nombre2Element.valueAsNumber;
 
@@ -17,6 +17,17 @@ function calculerMoyenne() {
     return;
   }
 
-  const moyenne = (nombre1 + nombre2) / 2;
+  const moyenne = calculerMoyenne(nombre1, nombre2);
   categoryMessageElement.textContent = `La moyenne de ${nombre1} et ${nombre2} est : ${moyenne}`;
+}
+
+
+/**
+ * Calcule la moyenne de 2 nombres
+ * @param {number} nombre1 
+ * @param {number} nombre2 
+ * @returns {number} La moyenne de 2 nombres
+ */
+function calculerMoyenne(nombre1, nombre2) {
+  return (nombre1 + nombre2) / 2;
 }
