@@ -1,16 +1,12 @@
-let price = 20;
-const obj = { prix: 20 };
+const jsonCategories = `[
+  {"categoryName": "2 - 4", "ageMin": 2, "ageMax": 4},
+  {"categoryName": "5 - 7", "ageMin": 5, "ageMax": 7},
+  {"categoryName": "8 - 12", "ageMin": 8, "ageMax": 12},
+  {"categoryName": "13 - 18", "ageMin": 13, "ageMax": 18}
+]`;
 
-changerPrice(price);
-changerObj(obj);
+const categories = JSON.parse(jsonCategories);
 
-console.log(price); // 20
-console.log(obj); // 30
-
-function changerPrice(price) {
-  price = 30;
-}
-
-function changerObj(obj) {
-  obj.prix = 30;
+for (const category of categories) {
+  console.log(`${category.categoryName} : ${category.ageMin} - ${category.ageMax}`);
 }

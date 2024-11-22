@@ -12,7 +12,35 @@ const categoryMessageElement = document.getElementById("categorie_message");
 buttonExecuter.addEventListener("click", executerAction);
 
 //récupération des données du JSON
-const categories = JSON.parse(jsonCategories);
+const categories = JSON.parse(jsonCategories, categoryReviver);
+//displayCategories(categories);
+
+/**
+ * Reviver pour les catégories
+ * @param {string} key 
+ * @param {*} value 
+ * @returns 
+ */
+function categoryReviver(key, value) {
+  if (isNaN(parseInt(key)))
+    return value;
+
+  if (value instanceof Object && "categoryName" in value) {
+    const { categoryName, ageMin, ageMax } = value;
+    return new CategoryData(categoryName, ageMin, ageMax);
+  }
+
+  return value;
+}
+
+/**
+ * Affiche les catégories
+ * @param {object[]} mesCategories 
+ */
+function displayCategories(mesCategories) {
+  mesCategories.forEach(category => console.log(category.toString()));
+}
+
 
 /**
  * Retourne la catégorie de l'enfant en fonction de son age
@@ -20,7 +48,7 @@ const categories = JSON.parse(jsonCategories);
  * @returns {string} la catégorie de l'enfant
  */
 function retournerCategorie(age) {
-  const categoryObj = categories.find(category => age >= category.ageMin && age <= category.ageMax);
+  const categoryObj = categories.find(category => category.contains(age));
   return categoryObj ? categoryObj.categoryName : "";
 }
 
@@ -28,8 +56,8 @@ function retournerCategorie(age) {
  * Executer l'action
  * @param {MouseEvent} event
  */
-function executerAction() {
-  //age saisi par l'utilisateur
+function executerAction(event) {
+  event.preventDefault();
   const age = ageElement.valueAsNumber;
 
   const categorie = retournerCategorie(age);
