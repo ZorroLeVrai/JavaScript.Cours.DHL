@@ -1,12 +1,23 @@
-const jsonCategories = `[
-  {"categoryName": "2 - 4", "ageMin": 2, "ageMax": 4},
-  {"categoryName": "5 - 7", "ageMin": 5, "ageMax": 7},
-  {"categoryName": "8 - 12", "ageMin": 8, "ageMax": 12},
-  {"categoryName": "13 - 18", "ageMin": 13, "ageMax": 18}
-]`;
+async function fetchData() {
+    try {
+        // Utilisation de fetch avec await
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
 
-const categories = JSON.parse(jsonCategories);
+        // Vérification si la réponse est correcte
+        if (!response.ok) {
+        throw new Error(`Erreur : ${response.status}`);
+        }
 
-for (const category of categories) {
-  console.log(`${category.categoryName} : ${category.ageMin} - ${category.ageMax}`);
+        // Extraction des données au format JSON
+        const jsonResponse = await response.json();
+        const { title, body } = jsonResponse;
+
+        console.log("title:", title);
+        console.log("body:", body);
+    } catch (error) {
+        console.error(error.message);
+    }
 }
+
+
+fetchData();
