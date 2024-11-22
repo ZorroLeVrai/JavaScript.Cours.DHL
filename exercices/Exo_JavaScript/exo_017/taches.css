@@ -1,7 +1,7 @@
 #liste_taches {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: top;
 }
 
 #liste_taches>div {
