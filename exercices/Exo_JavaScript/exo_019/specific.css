@@ -1,0 +1,23 @@
+.titre_commentaire {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 0.2rem 0.5rem;
+}
+
+th[scope="row"] {
+  width: 6ch;
+}

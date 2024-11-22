@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="./specific.css"/>
+    <script defer src="./main.js"></script>
+
+    <title>EXERCICE 19 - Récupérez un JSON à partir d'une API</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="display-4">EXERCICE 19 - Récupérez un JSON à partir d'une API</h1>
+            <hr>
+        </div>
+
+        <div>
+            <p>Entrez les informations nécessaires pour récupérer des commentaires</p>
+            <div class="grid-container">
+                <label for="postid">postId: </label>
+                <input type="number" id="postid" />
+                <label for="id">id: </label>
+                <input type="number" id="id" />
+                <button id="executer" class="grid-item-2columns">Exécuter</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div id="result" class="lead">
+                <!-- <table>
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="2" class="titre_commentaire">postId = 7</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">postId</th>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">id</th>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">name</th>
+                            <td>Name content</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">email</th>
+                            <td>Email content</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">body</th>
+                            <td>Body content</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="2" class="titre_commentaire">postId = 7</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">postId</th>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">id</th>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">name</th>
+                            <td>Name content</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">email</th>
+                            <td>Email content</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">body</th>
+                            <td>Body content</td>
+                        </tr>
+                    </tbody>
+                </table> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
